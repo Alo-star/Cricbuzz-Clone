@@ -1,7 +1,6 @@
 package com.training.alokdemoapplication;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LivematchActivity extends AppCompatActivity {

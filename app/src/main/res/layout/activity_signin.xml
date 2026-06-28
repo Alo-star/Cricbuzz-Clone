@@ -9,102 +9,44 @@
     android:background="@drawable/cricket"
     tools:context=".MainActivity">
 
-    <!-- App Title -->
-
-    <!-- Username Input -->
-
-    <!-- Email Input -->
-
     <TextView
         android:id="@+id/View"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="CRICBUZZ"
-        android:textColor="@color/black"
+        android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="32dp"
-        android:drawableStart="@android:drawable/ic_menu_my_calendar"
         android:hint="Enter Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:textColorHint="#888888"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:boxBackgroundMode="filled"
         app:layout_constraintTop_toBottomOf="@id/View"
-        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/mail"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_menu_my_calendar"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Email ID"
-        android:drawableStart="@android:drawable/sym_action_email"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:minHeight="48dp"
-        app:layout_constraintTop_toBottomOf="@id/editTextText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="24dp"
-        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
-
-    <!-- Password Input -->
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:drawableStart="@android:drawable/ic_lock_lock"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mail"
-        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize,TextContrastCheck" />
-
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/register"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@color/white"
-        android:text="Register"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        tools:ignore="HardcodedText" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        

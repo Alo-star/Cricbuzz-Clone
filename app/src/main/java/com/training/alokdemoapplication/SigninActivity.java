@@ -10,10 +10,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SigninActivity extends AppCompatActivity {
-   Button registermain;
-   EditText name;
-   EditText mail;
-   EditText password;
+
+    Button registermain;
+    EditText name;
+    EditText mail;
+    EditText password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,27 +26,27 @@ public class SigninActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         registermain = findViewById(R.id.register);
 
+        registermain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name1 = name.getText().toString().trim();
+                String mail1 = mail.getText().toString().trim();
+                String password1 = password.getText().toString().trim();
 
-        registermain.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String name1 = name.getText().toString();
-                        String mail1 = mail.getText().toString();
-                        String password1 = password.getText().toString();
-
-                        if(name1.isEmpty() || mail1.isEmpty() || password1.isEmpty()) {
-                            Toast.makeText(SigninActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Intent i = new Intent(SigninActivity.this,MainActivity.class);
-                            startActivity(i);
-                        }
-                    }
+                if (name1.isEmpty()) {
+                    name.setError("Name is required");
+                } else if (mail1.isEmpty()) {
+                    mail.setError("Email is required");
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(mail1).matches()) {
+                    mail.setError("Enter a valid email");
+                } else if (password1.isEmpty()) {
+                    password.setError("Password is required");
+                } else {
+                    Intent i = new Intent(SigninActivity.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
                 }
-        );
-
-
-
+            }
+        });
     }
 }

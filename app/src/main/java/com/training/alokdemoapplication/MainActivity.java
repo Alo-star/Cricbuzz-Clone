@@ -25,39 +25,32 @@ public class MainActivity extends AppCompatActivity {
 
         b1 = findViewById(R.id.button);
         signin = findViewById(R.id.noaccount);
-         nameField = findViewById(R.id.editTextText);
-         passwordField = findViewById(R.id.password);
+        nameField = findViewById(R.id.editTextText);
+        passwordField = findViewById(R.id.password);
 
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = nameField.getText().toString().trim();
+                String password = passwordField.getText().toString().trim();
 
-        b1.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String name = nameField.getText().toString();
-                        String password = passwordField.getText().toString();
-                        if(name.isEmpty() || password.isEmpty()) {
-                            Toast.makeText(MainActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Intent i = new Intent(MainActivity.this,SecondActivity.class);
-                            startActivity(i);
-                        }
-                    }
+                if (name.isEmpty()) {
+                    nameField.setError("Name is required");
+                } else if (password.isEmpty()) {
+                    passwordField.setError("Password is required");
+                } else {
+                    Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                    startActivity(i);
                 }
-        );
+            }
+        });
 
-        signin.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(MainActivity.this,SigninActivity.class);
-                        startActivity(i);
-                    }
-                }
-        );
-
-
-
-
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SigninActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
