@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AlokdemoApplication</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_cricbuzz">Welcome to Cricbuzz</string>
+    <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
+</resources>
