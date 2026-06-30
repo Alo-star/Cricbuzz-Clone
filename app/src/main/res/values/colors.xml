@@ -27,4 +27,10 @@
     <color name="live_red">#E53935</color>
     <color name="warning_bg">#FFF3CD</color>
     <color name="warning_text">#856404</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+    <color name="text_tertiary">#757575</color> 
 </resources>
