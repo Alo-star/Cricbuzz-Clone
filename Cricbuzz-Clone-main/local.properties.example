@@ -1,5 +1,0 @@
-# Copy this file to "local.properties" (which is git-ignored) and fill in your own key.
-# Get a free key at: https://rapidapi.com/ -> search "free-cricbuzz-cricket-api"
-
-sdk.dir=/path/to/your/Android/sdk
-RAPIDAPI_KEY=your_rapidapi_key_here
