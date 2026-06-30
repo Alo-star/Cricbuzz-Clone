@@ -1,51 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-        android:gravity="center_vertical" android:paddingStart="8dp" android:paddingEnd="16dp">
-        <TextView android:id="@+id/backBtn" android:layout_width="48dp" android:layout_height="48dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:textStyle="bold" android:layout_marginStart="4dp"/>
-        <TextView android:id="@+id/refreshBtn" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:paddingStart="12dp" android:paddingEnd="12dp"
-            android:paddingTop="6dp" android:paddingBottom="6dp"/>
-    </LinearLayout>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView android:id="@+id/offlineBanner" android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:text="⚠️ Offline — showing cached matches"
-        android:textSize="12sp" android:gravity="center" android:visibility="gone"/>
+    <LinearLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" 
+        android:paddingStart="8dp" 
+        android:paddingEnd="16dp">
 
-    <TextView android:id="@+id/loadingText" android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:text="Loading upcoming matches..."
-        android:visibility="gone"/>
+        <TextView android:id="@+id/backBtn" 
+            android:layout_width="48dp" 
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefresh"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        <TextView 
+            android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1"
+            android:textStyle="bold" 
+            android:layout_marginStart="4dp"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView android:id="@+id/refreshBtn" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp" 
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp" 
+            android:paddingBottom="6dp"/>
+    </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="6dp"
-                android:clipToPadding="false"/>
+    <TextView android:id="@+id/offlineBanner" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="⚠️ Offline — showing cached matches"
+        android:textSize="12sp" 
+        android:gravity="center" 
+        android:visibility="gone"/>
 
-            <LinearLayout
-                android:id="@+id/skeletonContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="6dp"
-                android:visibility="gone"/>
+    <TextView android:id="@+id/loadingText" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="Loading upcoming matches..."
+        android:visibility="gone"/>
 
-        </FrameLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:clipToPadding="false"/>
+
+            <LinearLayout
+                android:id="@+id/skeletonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>
