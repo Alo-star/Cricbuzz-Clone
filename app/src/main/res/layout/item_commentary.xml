@@ -12,7 +12,6 @@
         android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textColor="@color/cricbuzz_green"
         android:textSize="13sp"
         tools:text="14.3" />
 
