@@ -5,4 +5,9 @@
     <color name="yellow">#CCB912</color>
     <color name="blue">#071A83</color>
     <color name="red">#900606</color>
+
+    <!-- Added colors used by Theme.CricbuzzClone -->
+    <color name="cricbuzz_green">#00A86B</color>
+    <color name="cricbuzz_green_dark">#007B4F</color>
+    <color name="background">#FFFFFF</color>
 </resources>
