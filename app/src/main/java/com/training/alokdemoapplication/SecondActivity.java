@@ -22,7 +22,16 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, HomeActivity.class);
                 startActivity(i);
+                finish(); // Close SecondActivity so user can't go back to login
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Prevent going back to login screen - just exit or go to home
+        Intent i = new Intent(SecondActivity.this, HomeActivity.class);
+        startActivity(i);
+        finish();
     }
 }
