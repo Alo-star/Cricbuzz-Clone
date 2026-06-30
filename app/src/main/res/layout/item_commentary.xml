@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/overNumber"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/cricbuzz_green"
+        android:textSize="13sp"
+        tools:text="14.3" />
+
+    <TextView
+        android:id="@+id/commentaryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        tools:text="FOUR! Cracking cover drive, races away to the boundary." />
+
+</LinearLayout>

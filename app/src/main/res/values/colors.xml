@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#CCB912</color>
+    <color name="blue">#071A83</color>
+    <color name="red">#900606</color>
+
+    <!-- ===== Modern minimal palette (single source of truth for UI colors) ===== -->
+
+    <!-- Brand / primary accent -->
+    <color name="cricbuzz_green">#00A86B</color>
+    <color name="cricbuzz_green_dark">#00875A</color>
+    <color name="primary_tint_light">#E6F7F0</color>
+
+    <!-- Surfaces -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="divider">#EEEEEE</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+
+    <!-- Status accents (used sparingly, never as full-screen blocks) -->
+    <color name="live_red">#E53935</color>
+    <color name="warning_bg">#FFF3CD</color>
+    <color name="warning_text">#856404</color>
+</resources>
