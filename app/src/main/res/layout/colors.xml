@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cricbuzz_green">#009270</color>
+    <color name="cricbuzz_green_dark">#006D55</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#212121</color>
+
+    <color name="background">#F5F7FA</color>
+
+    <color name="card">#FFFFFF</color>
+
+    <color name="textPrimary">#1F2937</color>
+    <color name="textSecondary">#6B7280</color>
+
+    <color name="live">#E53935</color>
+
+    <color name="divider">#E5E7EB</color>
+
+</resources>
