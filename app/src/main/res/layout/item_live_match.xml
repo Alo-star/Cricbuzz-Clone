@@ -5,16 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="16dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="4dp"
-    app:cardBackgroundColor="@android:color/white">
+    app:cardBackgroundColor="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="14dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textColor="#222222"
                 tools:text="IPL 2026 • Final • T20" />
 
@@ -37,12 +37,13 @@
                 android:text="● LIVE"
                 android:textStyle="bold"
                 android:textColor="#E53935"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/favoriteIcon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_marginStart="10dp"
                 android:padding="2dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -55,7 +56,7 @@
             android:layout_height="1dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#EEEEEE" />
+            android:background="#F0F0F0" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,20 +102,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:text="220/8" />
+                android:textColor="#444444"
+                tools:text="--" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/matchStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:padding="10dp"
-            android:background="#E8F5E9"
-            android:textColor="#008C5A"
-            android:textStyle="bold"
-            android:textSize="13sp"
-            tools:text="India need 25 runs from 18 balls" />
 
     </LinearLayout>
 
