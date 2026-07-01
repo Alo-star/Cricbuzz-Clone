@@ -1,16 +1,5 @@
 🏏 Cricbuzz Clone (Android)
 
-
-
-
-
-
-
-
-
-
-
-
 A Cricbuzz-inspired Android application UI/UX clone built using native Android (Java + XML).
 This project focuses on replicating real-world cricket app design with clean layouts, modular screens, and offline data handling.
 
@@ -82,23 +71,95 @@ File → Open → Select project folder
 Let dependencies download automatically
 4. Run the app
 Click ▶ Run or press Shift + F10
-📁 Project Structure
-app/
- ├── java/
- │   ├── activities/
- │   ├── viewmodel/
- │   ├── repository/
- │   ├── api/
- │   ├── database/
- │   ├── adapters/
- │   └── models/
- │
- ├── res/
- │   ├── layout/
- │   ├── drawable/
- │   ├── menu/
- │   └── values/
-⚠️ Disclaimer
+Cricbuzz-Clone/
+│
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │
+│   │   │   ├── java/com/cricbuzzclone/
+│   │   │   │
+│   │   │   │   ├── ui/
+│   │   │   │   │   ├── activities/
+│   │   │   │   │   │   ├── MainActivity.java
+│   │   │   │   │   │   ├── HomeActivity.java
+│   │   │   │   │   │   ├── MatchDetailsActivity.java
+│   │   │   │   │   │   ├── TeamProfileActivity.java
+│   │   │   │   │   │   ├── PlayerProfileActivity.java
+│   │   │   │   │   │   ├── SeriesActivity.java
+│   │   │   │   │   │   └── NewsActivity.java
+│   │   │   │   │
+│   │   │   │   │   ├── fragments/
+│   │   │   │   │   │   ├── HomeFragment.java
+│   │   │   │   │   │   ├── LiveMatchesFragment.java
+│   │   │   │   │   │   ├── UpcomingMatchesFragment.java
+│   │   │   │   │   │   ├── FavoritesFragment.java
+│   │   │   │   │   │   └── NewsFragment.java
+│   │   │   │   │
+│   │   │   │   │   └── adapters/
+│   │   │   │   │       ├── MatchAdapter.java
+│   │   │   │   │       ├── TeamAdapter.java
+│   │   │   │   │       ├── PlayerAdapter.java
+│   │   │   │   │       └── NewsAdapter.java
+│   │   │   │
+│   │   │   │   ├── viewmodel/
+│   │   │   │   │   ├── LiveMatchViewModel.java
+│   │   │   │   │   ├── UpcomingMatchViewModel.java
+│   │   │   │   │   ├── MatchDetailsViewModel.java
+│   │   │   │   │   └── FavoritesViewModel.java
+│   │   │   │
+│   │   │   │   ├── repository/
+│   │   │   │   │   ├── MatchRepository.java
+│   │   │   │   │   ├── TeamRepository.java
+│   │   │   │   │   └── NewsRepository.java
+│   │   │   │
+│   │   │   │   ├── data/
+│   │   │   │   │   ├── local/
+│   │   │   │   │   │   ├── AppDatabase.java
+│   │   │   │   │   │   ├── dao/
+│   │   │   │   │   │   │   ├── MatchDao.java
+│   │   │   │   │   │   │   ├── TeamDao.java
+│   │   │   │   │   │   │   └── FavoritesDao.java
+│   │   │   │   │   │   └── entity/
+│   │   │   │   │   │       ├── MatchEntity.java
+│   │   │   │   │   │       ├── TeamEntity.java
+│   │   │   │   │   │       └── FavoriteEntity.java
+│   │   │   │   │
+│   │   │   │   │   ├── remote/
+│   │   │   │   │   │   ├── ApiService.java
+│   │   │   │   │   │   ├── RetrofitClient.java
+│   │   │   │   │   │   └── Interceptor.java
+│   │   │   │   │
+│   │   │   │   ├── model/
+│   │   │   │   │   ├── Match.java
+│   │   │   │   │   ├── Team.java
+│   │   │   │   │   ├── Player.java
+│   │   │   │   │   └── News.java
+│   │   │   │
+│   │   │   │   ├── utils/
+│   │   │   │   │   ├── Constants.java
+│   │   │   │   │   ├── Resource.java
+│   │   │   │   │   ├── NetworkUtils.java
+│   │   │   │   │   └── AppExecutors.java
+│   │   │   │
+│   │   │   │   └── App.java
+│   │   │
+│   │   ├── res/
+│   │   │   ├── layout/
+│   │   │   ├── drawable/
+│   │   │   ├── menu/
+│   │   │   ├── navigation/
+│   │   │   ├── values/
+│   │   │   └── xml/
+│   │   │
+│   │   └── AndroidManifest.xml
+│   │
+│   ├── build.gradle
+│
+├── gradle/
+├── build.gradle
+├── settings.gradle
+└── README.md
 
 This project is created only for educational purposes.
 It is not affiliated with Cricbuzz or any official cricket organization.
