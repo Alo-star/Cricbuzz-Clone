@@ -178,4 +178,9 @@ GitHub Profile
 📄 License
 
 This project is open source and available under the MIT License.
+<img width="722" height="1600" alt="WhatsApp Image 2026-07-01 at 10 17 49 AM" src="https://github.com/user-attachments/assets/7b9123ff-f9ad-42f9-b53f-11271b04dff5" />
+<img width="722" height="1600" alt="WhatsApp Image 2026-07-01 at 10 17 49 AM" src="https://github.com/user-attachments/assets/eb1f881f-bdd7-4bcc-98ec-430f4f2bc634" />
+<img width="722" height="1600" alt="WhatsApp Image 2026-07-01 at 10 17 50 AM (1)" src="https://github.com/user-attachments/assets/de9d2ae1-0064-42c6-94fa-a23af2595d29" />
+
+
 
