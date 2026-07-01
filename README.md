@@ -1,175 +1,124 @@
-🏏 Cricbuzz Clone (Android)
+Cricbuzz Clone (Android)
 
-A Cricbuzz-inspired Android application UI/UX clone built using native Android (Java + XML).
-This project focuses on replicating real-world cricket app design with clean layouts, modular screens, and offline data handling.
 
-📱 Overview
 
-This project is a static + local-data cricket app clone inspired by Cricbuzz.
-It is built purely for learning Android development, UI design, and app architecture practice.
 
-Key focus:
 
-Clean UI replication of Cricbuzz
-Multi-screen navigation flow
-Local database integration (SQLite)
-Production-style architecture (MVVM upgrade)
+
+
+
+
+
+
+
+
+
+A Cricbuzz-inspired Android application UI/UX clone built using Java, XML, MVVM architecture, Retrofit, and Room DB.
+This project focuses on replicating a real-world cricket app experience with clean UI, modular architecture, and offline support.
+
+📱 About the Project
+
+This is a learning-based Cricbuzz clone app that replicates the UI/UX of a cricket score application.
+
+🎯 Goals:
+Practice Android development
+Learn MVVM architecture
+Implement offline caching
+Build real-world UI screens
 ✨ Features
 🏠 Home screen with match cards
-🏏 Live / Upcoming match UI
-📊 Static scorecard screen
-📰 News feed layout
+🏏 Live & Upcoming matches UI
+📊 Match details & scorecard screen
+📰 Cricket news feed layout
 👥 Team & player profiles
-📅 Series & tournament listing
+📅 Series & tournaments listing
 ⭐ Favorites system (Room DB)
 🔍 Match details with commentary UI
 📱 Bottom navigation + drawer menu
-💾 Offline support (cached data)
+💾 Offline caching support
 🔄 Pull-to-refresh & auto update simulation
+⚡ Smooth UI animations
 🛠️ Tech Stack
 Layer	Technology
 Language	Java
 UI	XML (Material Design)
 Architecture	MVVM
 Networking	Retrofit + OkHttp
-Database	SQLite + Room
-Async	LiveData / ViewModel
+Database	Room + SQLite
+Async	LiveData + ViewModel
 IDE	Android Studio
-🧠 Architecture (Production Upgrade)
-MVVM Pattern
-ViewModel handles UI logic
-Repository manages data sources
-Activities only render state
-API Layer
-Retrofit-based networking
-OkHttp interceptor for API key handling
-Local Storage
-Room database for caching matches
-Favorites stored offline
-State Handling
-Loading / Success / Error states
-Cached fallback when offline
+🧠 Architecture Overview
+
+This project follows MVVM (Model–View–ViewModel) architecture:
+
+View (UI Layer)
+Activities & Fragments handle UI rendering only
+ViewModel
+Holds UI-related data and logic
+Repository
+Single source of truth (API + Local DB)
+Data Sources
+Remote: Retrofit API
+Local: Room Database
 📸 Screenshots
 
-Add your screenshots here for best presentation
+Add your app screenshots here
 
-📌 Suggested layout:
-
-| Home Screen | Live Matches | Match Details |
-|-------------|--------------|----------------|
-| 🖼️          | 🖼️           | 🖼️             |
-
-| Teams Page  | News Feed    | Player Profile |
-|-------------|--------------|----------------|
-| 🖼️          | 🖼️           | 🖼️             |
+Home	Live Matches	Match Details
+📷	📷	📷
+Teams	News	Player Profile
+📷	📷	📷
 🚀 Getting Started
-1. Clone the repo
+1. Clone the repository
 git clone https://github.com/Alo-star/Cricbuzz-Clone.git
 2. Open in Android Studio
 File → Open → Select project folder
 3. Sync Gradle
-Let dependencies download automatically
+Wait for dependencies to download
 4. Run the app
 Click ▶ Run or press Shift + F10
-Cricbuzz-Clone/
-│
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │
-│   │   │   ├── java/com/cricbuzzclone/
-│   │   │   │
-│   │   │   │   ├── ui/
-│   │   │   │   │   ├── activities/
-│   │   │   │   │   │   ├── MainActivity.java
-│   │   │   │   │   │   ├── HomeActivity.java
-│   │   │   │   │   │   ├── MatchDetailsActivity.java
-│   │   │   │   │   │   ├── TeamProfileActivity.java
-│   │   │   │   │   │   ├── PlayerProfileActivity.java
-│   │   │   │   │   │   ├── SeriesActivity.java
-│   │   │   │   │   │   └── NewsActivity.java
-│   │   │   │   │
-│   │   │   │   │   ├── fragments/
-│   │   │   │   │   │   ├── HomeFragment.java
-│   │   │   │   │   │   ├── LiveMatchesFragment.java
-│   │   │   │   │   │   ├── UpcomingMatchesFragment.java
-│   │   │   │   │   │   ├── FavoritesFragment.java
-│   │   │   │   │   │   └── NewsFragment.java
-│   │   │   │   │
-│   │   │   │   │   └── adapters/
-│   │   │   │   │       ├── MatchAdapter.java
-│   │   │   │   │       ├── TeamAdapter.java
-│   │   │   │   │       ├── PlayerAdapter.java
-│   │   │   │   │       └── NewsAdapter.java
-│   │   │   │
-│   │   │   │   ├── viewmodel/
-│   │   │   │   │   ├── LiveMatchViewModel.java
-│   │   │   │   │   ├── UpcomingMatchViewModel.java
-│   │   │   │   │   ├── MatchDetailsViewModel.java
-│   │   │   │   │   └── FavoritesViewModel.java
-│   │   │   │
-│   │   │   │   ├── repository/
-│   │   │   │   │   ├── MatchRepository.java
-│   │   │   │   │   ├── TeamRepository.java
-│   │   │   │   │   └── NewsRepository.java
-│   │   │   │
-│   │   │   │   ├── data/
-│   │   │   │   │   ├── local/
-│   │   │   │   │   │   ├── AppDatabase.java
-│   │   │   │   │   │   ├── dao/
-│   │   │   │   │   │   │   ├── MatchDao.java
-│   │   │   │   │   │   │   ├── TeamDao.java
-│   │   │   │   │   │   │   └── FavoritesDao.java
-│   │   │   │   │   │   └── entity/
-│   │   │   │   │   │       ├── MatchEntity.java
-│   │   │   │   │   │       ├── TeamEntity.java
-│   │   │   │   │   │       └── FavoriteEntity.java
-│   │   │   │   │
-│   │   │   │   │   ├── remote/
-│   │   │   │   │   │   ├── ApiService.java
-│   │   │   │   │   │   ├── RetrofitClient.java
-│   │   │   │   │   │   └── Interceptor.java
-│   │   │   │   │
-│   │   │   │   ├── model/
-│   │   │   │   │   ├── Match.java
-│   │   │   │   │   ├── Team.java
-│   │   │   │   │   ├── Player.java
-│   │   │   │   │   └── News.java
-│   │   │   │
-│   │   │   │   ├── utils/
-│   │   │   │   │   ├── Constants.java
-│   │   │   │   │   ├── Resource.java
-│   │   │   │   │   ├── NetworkUtils.java
-│   │   │   │   │   └── AppExecutors.java
-│   │   │   │
-│   │   │   │   └── App.java
-│   │   │
-│   │   ├── res/
-│   │   │   ├── layout/
-│   │   │   ├── drawable/
-│   │   │   ├── menu/
-│   │   │   ├── navigation/
-│   │   │   ├── values/
-│   │   │   └── xml/
-│   │   │
-│   │   └── AndroidManifest.xml
-│   │
-│   ├── build.gradle
-│
-├── gradle/
-├── build.gradle
-├── settings.gradle
-└── README.md
+📁 Project Structure
+app/
+ ├── ui/
+ │   ├── activities/
+ │   ├── fragments/
+ │   └── adapters/
+ │
+ ├── viewmodel/
+ ├── repository/
+ │
+ ├── data/
+ │   ├── local/   (Room DB)
+ │   └── remote/  (Retrofit API)
+ │
+ ├── model/
+ ├── utils/
+ └── App.java
+⚙️ Key Modules
+📡 Networking
+Retrofit API integration
+OkHttp interceptor for API key
+Centralized API service layer
+💾 Local Database
+Room database for caching
+Offline match data support
+Favorites storage
+🔄 Performance
+Live updates using ViewModel
+Auto refresh simulation
+Smooth RecyclerView animations
+⚠️ Disclaimer
 
-This project is created only for educational purposes.
+This project is created for educational purposes only.
 It is not affiliated with Cricbuzz or any official cricket organization.
-No real-time or official data API is used.
+No real-time official data is used.
 
 👨‍💻 Author
 
 Alo-star
-GitHub: Cricbuzz Clone Repo
+GitHub: https://github.com/Alo-star
 
 📄 License
 
 This project is licensed under the MIT License.
+
