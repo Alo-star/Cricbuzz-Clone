@@ -1,0 +1,85 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+// Load RAPIDAPI_KEY from local.properties (gitignored) so the key never gets committed.
+def localProps = new Properties()
+def localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) {
+    localProps.load(new FileInputStream(localPropsFile))
+}
+def rapidApiKey = localProps.getProperty("RAPIDAPI_KEY", "")
+
+android {
+    namespace 'com.training.alokdemoapplication'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.training.alokdemoapplication"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Exposes the live cricket API key to Java code as BuildConfig.RAPIDAPI_KEY
+        // Key is never hardcoded in source — it is read from local.properties (gitignored),
+        // which is NOT committed to version control.
+        buildConfigField "String", "RAPIDAPI_KEY", "\"${rapidApiKey}\""
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // Networking
+    implementation libs.retrofit
+    implementation libs.retrofit.gson
+    implementation libs.okhttp
+    implementation libs.okhttp.logging
+    implementation libs.gson
+
+    // Room (offline caching)
+    implementation libs.room.runtime
+    annotationProcessor libs.room.compiler
+
+    // Lifecycle / MVVM
+    implementation libs.lifecycle.viewmodel
+    implementation libs.lifecycle.livedata
+
+    // UI
+    implementation libs.recyclerview
+    implementation libs.swiperefreshlayout
+    implementation libs.shimmer
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
